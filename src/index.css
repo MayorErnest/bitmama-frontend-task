@@ -17,11 +17,8 @@
 }
 
 body {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	background: var(--app-white);
-	min-height: 100vh;
+	background: var(--app-teal);
+	height: 100vh;
 }
 
 .container {

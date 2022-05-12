@@ -1,4 +1,11 @@
+.page-container {
+	display: flex;
+	height: 100vh;
+}
+
 .container {
+	max-width: 30rem;
+	margin: auto;
 	animation: slide-in 0.9s forwards;
 	-webkit-animation: slide-in 0.9s forwards;
 }
