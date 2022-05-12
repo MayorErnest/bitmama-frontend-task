@@ -1,0 +1,39 @@
+.container {
+	animation: slide-in 0.9s forwards;
+	-webkit-animation: slide-in 0.9s forwards;
+}
+
+.container header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 4.375rem;
+}
+
+.container header svg {
+	fill: var(--app-green);
+	width: 2.5rem;
+	height: 2.5rem;
+}
+
+.container form > * {
+	margin: 1rem 0rem;
+}
+
+@keyframes slide-in {
+	0% {
+		transform: translateX(-6.25rem);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
+
+@-webkit-keyframes slide-in {
+	0% {
+		-webkit-transform: translateX(-6.25rem);
+	}
+	100% {
+		-webkit-transform: translateX(0%);
+	}
+}

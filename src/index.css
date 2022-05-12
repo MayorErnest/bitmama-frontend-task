@@ -3,15 +3,15 @@
 :root {
 	--app-white: #ffffff;
 	--app-black: #080b11;
-	--app-green: #664de5;
+	--app-green: #03a438;
 	--app-ash: #a8afbd;
 	--app-gray: #5a6477;
 	--app-teal: #f8f9fc;
 }
 
 * {
-	padding: 0px;
-	margin: 0px;
+	padding: 0rem;
+	margin: 0rem;
 	box-sizing: border-box;
 	font-family: "Roboto", sans-serif;
 }

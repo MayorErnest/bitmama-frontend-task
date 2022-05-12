@@ -1,6 +1,6 @@
 .container {
-	background: var(--app-blue);
-	border: 0.0625rem solid var(--app-blue);
+	background: var(--app-green);
+	border: 0.0625rem solid var(--app-green);
 	border-radius: 0.3125rem;
 	color: var(--app-white);
 	cursor: pointer;
@@ -11,5 +11,5 @@
 
 .container:hover {
 	background: var(--app-white);
-	color: var(--app-blue);
+	color: var(--app-green);
 }

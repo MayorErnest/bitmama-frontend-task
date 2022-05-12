@@ -1,0 +1,21 @@
+.container {
+	text-align: center;
+	margin-bottom: 3.125rem;
+}
+
+.container h1 {
+	font-size: 1.55rem;
+}
+
+.container h2 {
+	color: var(--app-ash);
+	font-size: 0.875rem;
+	font-weight: 400;
+	margin-top: 0.875rem;
+}
+
+@media screen and (min-width: 768px) {
+	.container h1 {
+		font-size: 2rem;
+	}
+}

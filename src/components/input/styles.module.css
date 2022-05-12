@@ -14,7 +14,7 @@
 }
 
 .container input:focus {
-	outline-color: var(--app-blue);
+	outline-color: var(--app-green);
 }
 
 .container input::placeholder {
