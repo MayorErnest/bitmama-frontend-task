@@ -1,0 +1,15 @@
+.container {
+	background: var(--app-blue);
+	border: 0.0625rem solid var(--app-blue);
+	border-radius: 0.3125rem;
+	color: var(--app-white);
+	cursor: pointer;
+	font-size: 0.9rem;
+	width: 100%;
+	padding: 1rem;
+}
+
+.container:hover {
+	background: var(--app-white);
+	color: var(--app-blue);
+}

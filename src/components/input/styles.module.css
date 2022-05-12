@@ -1,0 +1,49 @@
+.container label {
+	display: block;
+	color: var(--app-gray);
+	font-size: 0.875rem;
+	font-weight: 500;
+	margin-bottom: 0.3125rem;
+}
+
+.container input {
+	width: 100%;
+	padding: 0.875rem;
+	border: 0.0625rem solid var(--app-ash);
+	border-radius: 0.3125rem;
+}
+
+.container input:focus {
+	outline-color: var(--app-blue);
+}
+
+.container input::placeholder {
+	color: var(--app-ash);
+	font-weight: 500;
+}
+
+.input-box {
+	display: flex;
+}
+
+.input-box span {
+	background: var(--app-teal);
+	border: 0.0625rem solid var(--app-ash);
+	border-radius: 0.3125rem;
+	color: var(--app-ash);
+	font-size: 0.875rem;
+	font-weight: 500;
+	padding: 0.875rem;
+}
+
+.extended .input-box span {
+	border-top-right-radius: 0rem;
+	border-bottom-right-radius: 0rem;
+	border-right: none;
+}
+
+.extended input {
+	border-top-left-radius: 0rem;
+	border-bottom-left-radius: 0rem;
+	border-left: none;
+}
