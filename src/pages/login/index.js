@@ -6,7 +6,7 @@ import styles from "./styles.module.css";
 
 const Login = () => {
 	return (
-		<main className={styles.container}>
+		<main className={`${styles.container} container`}>
 			<header>
 				<Logo />
 				<h1>Bitmama</h1>
