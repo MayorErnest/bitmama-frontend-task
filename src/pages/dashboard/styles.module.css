@@ -23,6 +23,10 @@
 	margin: 1.2rem auto;
 }
 
+.avatar svg {
+	width: 100%;
+}
+
 .container ul {
 	list-style-type: none;
 	text-align: center;
@@ -36,6 +40,7 @@
 	margin: 0.5rem 0rem;
 	padding: 1.3rem 0rem;
 	border-radius: 5px;
+	font-size: 0.875rem;
 }
 
 .table-item:first-of-type {
@@ -69,6 +74,8 @@
 	border: none;
 	outline: none;
 	cursor: pointer;
+	color: var(--app-black);
+	font-size: 0.875rem;
 }
 
 .buttons {
