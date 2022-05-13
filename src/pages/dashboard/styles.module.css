@@ -41,6 +41,7 @@
 	padding: 1.3rem 0rem;
 	border-radius: 5px;
 	font-size: 0.875rem;
+	text-transform: capitalize;
 }
 
 .table-item:first-of-type {
@@ -76,6 +77,11 @@
 	cursor: pointer;
 	color: var(--app-black);
 	font-size: 0.875rem;
+}
+
+.session-item-logout:hover {
+	color: var(--app-green);
+	font-weight: 700;
 }
 
 .buttons {

@@ -47,3 +47,16 @@
 	border-bottom-left-radius: 0rem;
 	border-left: none;
 }
+
+.error {
+	color: red;
+	font-size: 00.875rem;
+}
+
+.error input {
+	border: 0.0625rem solid red;
+}
+
+.error input:focus {
+	outline-color: red;
+}

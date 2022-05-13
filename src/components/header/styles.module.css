@@ -5,6 +5,7 @@
 
 .container h1 {
 	font-size: 1.55rem;
+	text-transform: capitalize;
 }
 
 .container h2 {
@@ -12,6 +13,7 @@
 	font-size: 0.875rem;
 	font-weight: 400;
 	margin-top: 0.875rem;
+	text-transform: capitalize;
 }
 
 @media screen and (min-width: 768px) {
