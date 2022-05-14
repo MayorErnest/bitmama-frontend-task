@@ -36,24 +36,6 @@ const Dashboard = () => {
 		navigation("/");
 	};
 
-	const handleSignIntoAnotherAccount = () => {
-		localStorage?.setItem(
-			"userDetails",
-			JSON.stringify([
-				{ userName: currentSession?.userName, active: false },
-				...userSessions
-					?.filter(
-						(user) => user.userName !== currentSession?.userName
-					)
-					.map(({ userName }) => ({
-						userName,
-						active: false,
-					})),
-			])
-		);
-		navigation("/");
-	};
-
 	const setUsertoIdle = useCallback(() => {
 		if (userSessions) {
 			const timer = setTimeout(() => {
@@ -94,6 +76,18 @@ const Dashboard = () => {
 			);
 		}
 	}, []);
+
+	// checkuser has been logged out
+	useEffect(() => {
+		if (
+			userSessions &&
+			!userSessions.some(
+				(user) => user?.userName === currentSession?.userName
+			)
+		) {
+			navigation("/");
+		}
+	}, [navigation, currentSession?.userName, userSessions]);
 
 	// set user to inactive after 60 seconds
 	useEffect(() => {
@@ -154,7 +148,7 @@ const Dashboard = () => {
 				</div>
 				<div className={`${styles.buttons}`}>
 					<Button onClick={handleLogout}>Sign Out</Button>
-					<Button onClick={handleSignIntoAnotherAccount}>
+					<Button onClick={() => navigation("/")}>
 						Sign Into New Account
 					</Button>
 				</div>
