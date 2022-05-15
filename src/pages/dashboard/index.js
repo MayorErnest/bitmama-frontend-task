@@ -36,13 +36,23 @@ const Dashboard = () => {
 		navigation("/");
 	};
 
+	const handleSignIntoAnotherAccount = () => {
+		userSessions[0].isCurrentSession = false;
+		localStorage.setItem("userDetails", JSON.stringify(userSessions));
+		navigation("/");
+	};
+
 	const setUsertoIdle = useCallback(() => {
 		if (userSessions) {
 			const timer = setTimeout(() => {
 				localStorage?.setItem(
 					"userDetails",
 					JSON.stringify([
-						{ userName: currentSession?.userName, active: true },
+						{
+							userName: currentSession?.userName,
+							active: true,
+							isCurrentSession: true,
+						},
 						...userSessions
 							?.filter(
 								(user) =>
@@ -51,6 +61,7 @@ const Dashboard = () => {
 							.map(({ userName }) => ({
 								userName,
 								active: false,
+								isCurrentSession: false,
 							})),
 					])
 				);
@@ -58,6 +69,13 @@ const Dashboard = () => {
 			return () => clearTimeout(timer);
 		}
 	}, [currentSession?.userName, userSessions]);
+
+	useEffect(() => {
+		const allSessions = JSON?.parse(localStorage.getItem("userDetails"));
+		if (allSessions === null) {
+			navigation("/");
+		}
+	}, [navigation]);
 
 	// initialize dashboard
 	useEffect(() => {
@@ -148,7 +166,7 @@ const Dashboard = () => {
 				</div>
 				<div className={`${styles.buttons}`}>
 					<Button onClick={handleLogout}>Sign Out</Button>
-					<Button onClick={() => navigation("/")}>
+					<Button onClick={handleSignIntoAnotherAccount}>
 						Sign Into New Account
 					</Button>
 				</div>

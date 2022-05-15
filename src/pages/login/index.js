@@ -43,9 +43,16 @@ const Login = () => {
 
 		if (allCurrentUsers.length >= 1) {
 			if (allCurrentUsers.some((user) => user.userName === userName)) {
-				crudeStateUpdate({
-					userName: userName,
-				});
+				crudeStateUpdate(
+					{
+						userName: userName,
+					},
+					{
+						userName: userName,
+						active: true,
+						isCurrentSession: true,
+					}
+				);
 
 				navigation("/dashboard");
 
@@ -55,7 +62,14 @@ const Login = () => {
 				{
 					userName: userName,
 				},
-				[{ userName: userName, active: true }, ...allCurrentUsers]
+				[
+					{
+						userName: userName,
+						active: true,
+						isCurrentSession: true,
+					},
+					...allCurrentUsers,
+				]
 			);
 
 			navigation("/dashboard");
@@ -67,7 +81,7 @@ const Login = () => {
 			{
 				userName: userName,
 			},
-			[{ userName: userName, active: true }]
+			[{ userName: userName, active: true, isCurrentSession: true }]
 		);
 
 		navigation("/dashboard");
@@ -78,7 +92,7 @@ const Login = () => {
 		const currentUsersDetails = JSON?.parse(
 			localStorage.getItem("userDetails")
 		);
-		if (currentUsersDetails && currentUsersDetails[0].active) {
+		if (currentUsersDetails && currentUsersDetails[0].isCurrentSession) {
 			navigation("/dashboard");
 		}
 	}, [navigation]);
